@@ -211,6 +211,6 @@ CTS-Digital-Nurture
 
 ## Author
 
-**Dharineesh**
+**Dharineesh V**
 
 AI & Data Science Student
