@@ -214,4 +214,3 @@ CTS-Digital-Nurture
 **Dharineesh**
 
 AI & Data Science Student
-Java | DSA | Machine Learning | Cybersecurity
