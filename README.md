@@ -2,7 +2,7 @@
 
 ## About
 
-This repository contains my solutions for Cognizant Digital Nurture 4.0 Java FSE training exercises.
+This repository contains my solutions for Cognizant Digital Nurture 5.0 Java FSE training exercises.
 
 ## Week 1 Exercises
 
