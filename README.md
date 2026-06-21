@@ -4,6 +4,23 @@
 
 This repository contains my solutions for the Cognizant Digital Nurture 5.0 Java FSE training program.
 
+## Repository Structure
+
+```text
+CTS-Digital-Nurture
+│
+├── Week_1
+│   ├── Design-Patterns-Principles
+│   ├── Algorithms-Data-Structures
+│   ├── PLSQL
+│   ├── JUnit5-Mockito
+│   └── SLF4J
+│
+└── README.md
+```
+
+---
+
 ### Technologies Used
 
 * Java
@@ -192,22 +209,6 @@ WARN  LoggingExample - This is a warning message
 
 ---
 
-## Repository Structure
-
-```text
-CTS-Digital-Nurture
-│
-├── Week_1
-│   ├── Design-Patterns-Principles
-│   ├── Algorithms-Data-Structures
-│   ├── PLSQL
-│   ├── JUnit5-Mockito
-│   └── SLF4J
-│
-└── README.md
-```
-
----
 
 ## Author
 
