@@ -206,6 +206,7 @@ BUILD SUCCESS
 ERROR LoggingExample - This is an error message
 WARN  LoggingExample - This is a warning message
 ```
+# Week 2
 ```text
 CTS-Digital-Nurture
 │
