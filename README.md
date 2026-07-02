@@ -206,6 +206,18 @@ BUILD SUCCESS
 ERROR LoggingExample - This is an error message
 WARN  LoggingExample - This is a warning message
 ```
+```text
+CTS-Digital-Nurture
+│
+├── Week_2
+│   ├── Spring_Core_Maven
+│   ├── Spring_Data_JPA
+│
+└── README.md
+```
+
+---
+
 
 ---
 
