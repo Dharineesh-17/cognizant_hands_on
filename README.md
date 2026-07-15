@@ -218,7 +218,32 @@ CTS-Digital-Nurture
 ```
 
 ---
+# Week 3
+```text
+CTS-Digital-Nurture
+│
+├── Week_3
+│   ├── 1.Spring_rest_handson
+│   ├── 2.Spring_rest_handson
+|   ├──3.JWT_handson
+│
+└── README.md
+```
 
+---
+
+# Week 4
+```text
+CTS-Digital-Nurture
+│
+├── Week_4
+│   ├── Exercise_Creating_Microservices
+│   ├──Exercise_Eureka_Discovery_Server
+│
+└── README.md
+```
+
+---
 
 ---
 
