@@ -206,7 +206,7 @@ BUILD SUCCESS
 ERROR LoggingExample - This is an error message
 WARN  LoggingExample - This is a warning message
 ```
-# Week 2
+# Week 2 Exercises
 ```text
 CTS-Digital-Nurture
 │
@@ -218,7 +218,32 @@ CTS-Digital-Nurture
 ```
 
 ---
+# Week 3 Exercises
+```text
+CTS-Digital-Nurture
+│
+├── Week_3
+│   ├── 1.Spring_rest_handson
+│   ├── 2.Spring_rest_handson
+|   ├──3.JWT_handson
+│
+└── README.md
+```
 
+---
+
+# Week 4 Exercises
+```text
+CTS-Digital-Nurture
+│
+├── Week_4
+│   ├── Exercise_Creating_Microservices
+│   ├──Exercise_Eureka_Discovery_Server
+│
+└── README.md
+```
+
+---
 
 ---
 
