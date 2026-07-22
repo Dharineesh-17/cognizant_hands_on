@@ -1,0 +1,18 @@
+<div class="hello-container">
+  <h1>{{ getGreeting() }}, {{ name }}!</h1>
+  <p>Welcome to your first Angular component.</p>
+  <div class="info-card">
+    <h2>Current Date & Time</h2>
+    <p>{{ currentDate | date:'fullDate' }}</p>
+    <p>{{ currentDate | date:'shortTime' }}</p>
+  </div>
+  <div class="tech-stack">
+    <h3>Your Tech Stack</h3>
+    <ul>
+      <li>Angular {{ angularVersion }}</li>
+      <li>TypeScript</li>
+      <li>SCSS</li>
+      <li>RxJS</li>
+    </ul>
+  </div>
+</div>
