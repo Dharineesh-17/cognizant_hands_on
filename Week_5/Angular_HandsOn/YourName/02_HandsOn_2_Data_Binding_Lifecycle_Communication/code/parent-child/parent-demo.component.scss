@@ -1,0 +1,225 @@
+.parent-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  font-family: 'Inter', sans-serif;
+
+  h2 {
+    color: #2563eb;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  > p {
+    color: #64748b;
+    margin-bottom: 1.5rem;
+    font-size: 0.9375rem;
+
+    code {
+      background: #f1f5f9;
+      padding: 0.125rem 0.375rem;
+      border-radius: 4px;
+      font-size: 0.875rem;
+      color: #2563eb;
+    }
+  }
+}
+
+// Flow Diagram
+.flow-diagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.flow-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.flow-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.parent-flow {
+  background: #2563eb;
+  color: white;
+
+  .flow-icon { background: rgba(255, 255, 255, 0.2); }
+}
+
+.child-flow {
+  background: #8b5cf6;
+  color: white;
+
+  .flow-icon { background: rgba(255, 255, 255, 0.2); }
+}
+
+.flow-arrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+
+  code {
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .arrow-down {
+    color: #2563eb;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+  }
+
+  .arrow-up {
+    color: #8b5cf6;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+  }
+
+  .arrow-symbol { font-weight: 700; }
+}
+
+// Children Grid
+.children-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+// State Section
+.parent-state {
+  margin-bottom: 2rem;
+
+  h3 {
+    font-size: 1.125rem;
+    color: #1e293b;
+    margin-bottom: 1rem;
+  }
+}
+
+.state-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.state-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.25rem;
+
+  h4 {
+    font-size: 0.875rem;
+    color: #475569;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+.state-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.state-item {
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &.enrolled { background: #d1fae5; color: #065f46; }
+  &.favorite { background: #fce7f3; color: #9d174d; }
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #dc2626;
+  cursor: pointer;
+  font-size: 1.125rem;
+  padding: 0 0.25rem;
+  line-height: 1;
+
+  &:hover { background: #fecaca; border-radius: 4px; }
+}
+
+.empty-state {
+  color: #94a3b8;
+  font-size: 0.8125rem;
+  font-style: italic;
+}
+
+// Parent Log
+.parent-log {
+  h3 {
+    font-size: 1.125rem;
+    color: #1e293b;
+    margin-bottom: 1rem;
+  }
+}
+
+.log-entries {
+  background: #0f172a;
+  border-radius: 8px;
+  padding: 0.75rem;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.log-entry {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.375rem 0.5rem;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.75rem;
+  border-radius: 4px;
+
+  &:hover { background: #1e293b; }
+  &.highlight { background: rgba(56, 189, 248, 0.1); }
+
+  .log-index { color: #64748b; min-width: 24px; }
+  .log-text { color: #e2e8f0; }
+}
+
+.log-empty {
+  color: #64748b;
+  text-align: center;
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+}

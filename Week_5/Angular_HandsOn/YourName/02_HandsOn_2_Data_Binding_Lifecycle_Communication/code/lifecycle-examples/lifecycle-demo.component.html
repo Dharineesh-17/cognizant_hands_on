@@ -1,0 +1,110 @@
+<div class="lifecycle-container">
+  <h2>Angular Lifecycle Hooks</h2>
+  <p>Watch the execution order as you interact with the component.</p>
+
+  <div class="controls-bar">
+    <button (click)="changeTitle()" class="btn-primary">
+      Change Title
+    </button>
+    <button (click)="incrementStudents()" class="btn-secondary">
+      Students: {{ studentCount }} (+10)
+    </button>
+    <button (click)="toggleVisibility()" class="btn-secondary">
+      {{ isVisible ? 'Hide Section' : 'Show Section' }}
+    </button>
+    <button (click)="clearLogs()" class="btn-danger">Clear Logs</button>
+  </div>
+
+  <!-- Lifecycle Execution Order Diagram -->
+  <div class="order-diagram">
+    <h3>Hooks Execution Order</h3>
+    <div class="order-steps">
+      <div class="step">
+        <span class="step-num">1</span>
+        <span class="step-name">constructor()</span>
+        <span class="step-note">DI setup</span>
+      </div>
+      <div class="step-arrow">|</div>
+      <div class="step">
+        <span class="step-num">2</span>
+        <span class="step-name">ngOnChanges()</span>
+        <span class="step-note">@Input changes</span>
+      </div>
+      <div class="step-arrow">|</div>
+      <div class="step">
+        <span class="step-num">3</span>
+        <span class="step-name">ngOnInit()</span>
+        <span class="step-note">Initialize</span>
+      </div>
+      <div class="step-arrow">|</div>
+      <div class="step">
+        <span class="step-num">4</span>
+        <span class="step-name">ngDoCheck()</span>
+        <span class="step-note">Custom check</span>
+      </div>
+      <div class="step-arrow">|</div>
+      <div class="step">
+        <span class="step-num">5</span>
+        <span class="step-name">ngAfterContentInit()</span>
+        <span class="step-note">Content ready</span>
+      </div>
+      <div class="step-arrow">|</div>
+      <div class="step">
+        <span class="step-num">6</span>
+        <span class="step-name">ngAfterContentChecked()</span>
+        <span class="step-note">Content checked</span>
+      </div>
+      <div class="step-arrow">|</div>
+      <div class="step">
+        <span class="step-num">7</span>
+        <span class="step-name">ngAfterViewInit()</span>
+        <span class="step-note">DOM ready</span>
+      </div>
+      <div class="step-arrow">|</div>
+      <div class="step">
+        <span class="step-num">8</span>
+        <span class="step-name">ngAfterViewChecked()</span>
+        <span class="step-note">View checked</span>
+      </div>
+      <div class="step-arrow">|</div>
+      <div class="step destroy-step">
+        <span class="step-num">9</span>
+        <span class="step-name">ngOnDestroy()</span>
+        <span class="step-note">Cleanup!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Live Log Panel -->
+  <div class="log-panel" #lifecycleLog>
+    <div class="log-header">
+      <h3>Live Lifecycle Log</h3>
+      <span class="log-count">{{ logs.length }} events</span>
+    </div>
+    <div class="log-entries">
+      <div class="log-entry"
+           *ngFor="let log of logs; let i = index"
+           [class.highlight]="i === logs.length - 1">
+        <span class="log-index">{{ i + 1 }}</span>
+        <span class="log-text">{{ log }}</span>
+      </div>
+      <div class="log-empty" *ngIf="logs.length === 0">
+        No lifecycle events recorded yet. Interact with the controls above.
+      </div>
+    </div>
+  </div>
+
+  <!-- Conditional demo section -->
+  <div class="conditional-demo" *ngIf="isVisible">
+    <div class="info-card">
+      <h4>Component is Visible</h4>
+      <p>
+        This section uses <code>*ngIf="isVisible"</code>. Toggling this would trigger
+        <code>ngOnDestroy</code> when hidden and the
+        <code>constructor -> ngOnChanges -> ngOnInit</code> sequence when shown again.
+      </p>
+      <p>Current Title: <strong>{{ courseTitle }}</strong></p>
+      <p>Current Students: <strong>{{ studentCount }}</strong></p>
+    </div>
+  </div>
+</div>

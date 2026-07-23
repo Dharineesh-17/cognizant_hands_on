@@ -1,0 +1,92 @@
+<div class="parent-container">
+  <h2>Component Communication: Parent &harr; Child</h2>
+  <p>Parent manages course data and enrollment state. Child receives data via <code>@Input()</code> and sends events via <code>@Output()</code>.</p>
+
+  <!-- Communication Flow Diagram -->
+  <div class="flow-diagram">
+    <div class="flow-box parent-flow">
+      <span class="flow-icon">P</span>
+      <span>Parent Component</span>
+    </div>
+    <div class="flow-arrows">
+      <span class="arrow-down">
+        <code>@Input()</code>
+        <span class="arrow-symbol">&#9660;</span>
+        data
+      </span>
+      <span class="arrow-up">
+        <code>@Output()</code>
+        <span class="arrow-symbol">&#9650;</span>
+        events
+      </span>
+    </div>
+    <div class="flow-box child-flow">
+      <span class="flow-icon">C</span>
+      <span>Child Component</span>
+    </div>
+  </div>
+
+  <!-- Child Components rendered by Parent -->
+  <div class="children-grid">
+    <ng-container *ngFor="let course of courses">
+      <!--
+        @Input:  [course]="course"                   -> passes course object to child
+                 [isEnrolled]="isEnrolled(course.id)" -> passes enrollment boolean
+                 [maxSlots]="200"                    -> passes capacity number
+        @Output: (enroll)="onEnroll($event)"         -> child fires, parent handles
+                  (unenroll)="onUnenroll($event)"     -> child fires, parent handles
+                  (favorite)="onFavorite($event)"      -> child fires, parent handles
+      -->
+      <app-child-demo
+        [course]="course"
+        [isEnrolled]="isEnrolled(course.id)"
+        [maxSlots]="200"
+        (enroll)="onEnroll($event)"
+        (unenroll)="onUnenroll($event)"
+        (favorite)="onFavorite($event)">
+      </app-child-demo>
+    </ng-container>
+  </div>
+
+  <!-- Parent's Managed State -->
+  <div class="parent-state">
+    <h3>Parent's Managed State</h3>
+    <div class="state-grid">
+      <div class="state-card">
+        <h4>Enrolled Courses</h4>
+        <div class="state-list">
+          <span *ngFor="let courseId of enrolledCourses" class="state-item enrolled">
+            {{ getCourseTitle(courseId) }}
+          </span>
+          <span *ngIf="enrolledCourses.size === 0" class="empty-state">None yet — click "Enroll Now"</span>
+        </div>
+      </div>
+      <div class="state-card">
+        <h4>Favorites</h4>
+        <div class="state-list">
+          <span *ngFor="let fav of favorites" class="state-item favorite">
+            &#9825; {{ fav.title }}
+            <button (click)="removeFavorite(fav.id)" class="remove-btn">&times;</button>
+          </span>
+          <span *ngIf="favorites.length === 0" class="empty-state">None yet — click &#9825;</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Parent Event Log -->
+  <div class="parent-log">
+    <h3>Parent Event Log (received from children)</h3>
+    <div class="log-entries">
+      <div class="log-entry"
+           *ngFor="let log of parentLog; let i = index"
+           [class.highlight]="i === parentLog.length - 1">
+        <span class="log-index">{{ i + 1 }}</span>
+        <span class="log-text">{{ log }}</span>
+      </div>
+      <div class="log-empty" *ngIf="parentLog.length === 0">
+        Click "Enroll Now" or "&#9825;" on a child card to see events flow up to the parent.
+      </div>
+    </div>
+  </div>
+</div>

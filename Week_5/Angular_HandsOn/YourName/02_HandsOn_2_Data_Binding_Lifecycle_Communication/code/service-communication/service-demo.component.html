@@ -1,0 +1,53 @@
+<div class="service-demo">
+  <h3>Service-Based Communication</h3>
+  <p>Multiple components share state via an injectable service (singleton pattern with providedIn: 'root').</p>
+
+  <div class="demo-actions">
+    <button (click)="userJoin()" class="btn-primary">User Joined</button>
+    <button (click)="userLeave()" class="btn-secondary">User Left</button>
+    <button (click)="addCustomNotification()" class="btn-secondary">Add Notification</button>
+    <button (click)="clearAll()" class="btn-danger">Clear All</button>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card">
+      <span class="stat-value">{{ activeUsers }}</span>
+      <span class="stat-label">Active Users</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-value">{{ notificationCount }}</span>
+      <span class="stat-label">Notifications</span>
+    </div>
+    <div class="stat-card wide">
+      <span class="stat-value small">{{ userStatus }}</span>
+      <span class="stat-label">Status</span>
+    </div>
+  </div>
+
+  <div class="notification-list">
+    <div class="noti-header">
+      <span>Notifications (shared via CommunicationService)</span>
+      <span class="noti-count">{{ notificationCount }}</span>
+    </div>
+    <div class="noti-entries">
+      <div class="noti-entry" *ngFor="let noti of notifications; let i = index">
+        <span class="noti-text">{{ noti }}</span>
+        <button (click)="commService.removeNotification(i)" class="remove-btn">&times;</button>
+      </div>
+      <div class="noti-empty" *ngIf="!hasNotifications">
+        No notifications yet. Click the buttons above to interact.
+      </div>
+    </div>
+  </div>
+
+  <!-- Architecture note -->
+  <div class="architecture-note">
+    <h4>How it works</h4>
+    <div class="arch-diagram">
+      <div class="arch-box">Component A</div>
+      <div class="arch-center">CommunicationService<br><small>(providedIn: 'root')</small></div>
+      <div class="arch-box">Component B</div>
+    </div>
+    <p>Both components inject the <strong>same service instance</strong>. Changes made by one component are immediately visible to the other.</p>
+  </div>
+</div>
