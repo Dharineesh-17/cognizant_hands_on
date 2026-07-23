@@ -1,0 +1,48 @@
+ANGULAR PROJECT FILE & FOLDER EXPLANATIONS
+============================================
+
+1. angular.json
+   Purpose: Main Angular CLI configuration file that defines build, serve, and test configurations for the project workspace.
+
+2. tsconfig.json
+   Purpose: Root TypeScript configuration file that sets compiler options and paths for the entire Angular project.
+
+3. tsconfig.app.json
+   Purpose: TypeScript configuration specific to the application code (excludes test files), extends the root tsconfig.json.
+
+4. package.json
+   Purpose: Node.js project manifest file that lists project dependencies, scripts (ng serve, ng build), and metadata like name and version.
+
+5. src/main.ts
+   Purpose: Application entry point - bootstraps the root component (AppComponent) or runs the application configuration on the Angular platform.
+
+6. src/app/app.config.ts
+   Purpose: Standalone API configuration file (Angular 17+) that provides global configuration for providers, dependencies, and application setup.
+
+7. src/app/app.ts (or app.component.ts)
+   Purpose: Root component definition that serves as the main component of the application, bootstrapped by main.ts.
+
+8. src/index.html
+   Purpose: Main HTML file loaded by the browser - contains the <app-root> element where Angular mounts and renders the application.
+
+ADDITIONAL INFO:
+================
+- Angular 17+ uses STANDALONE COMPONENTS by default (no NgModules required)
+- app.config.ts is used instead of app.module.ts in standalone mode
+- src/main.ts calls bootstrapApplication() with AppComponent and app configuration
+- dist/ folder contains compiled, minified, and optimized production build files
+
+BUDGETS CONFIGURATION:
+======================
+Location: angular.json > architect > build > configurations > production
+- maximumWarning: Threshold for warning about bundle size (default ~2MB)
+- maximumError: Threshold for error about bundle size (default ~5MB)
+- Controls: Prevents accidentally creating oversized bundles; helps maintain good performance
+
+BUILD OUTPUT FILES IN dist/:
+=============================
+- main.*.js: Main application bundle (compiled TypeScript)
+- polyfills.*.js: Polyfills for browser compatibility
+- styles.*.css: Global CSS styles
+- index.html: Production HTML file
+- favicon.ico: Application icon
