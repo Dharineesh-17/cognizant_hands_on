@@ -1,8 +1,8 @@
 # Git Ignore Lab - Task 2 Commands
 
 ## Setup Information
-- **Username:** PratapSakthivel
-- **Email:** pratapssakthivel@gmail.com
+- **Username:** Dharineesh17
+- **Email:** dharineeshvengatesan@gmail.com
 
 ---
 
