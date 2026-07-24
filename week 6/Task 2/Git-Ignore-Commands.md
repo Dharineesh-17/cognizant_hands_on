@@ -31,7 +31,6 @@ git init
 git config user.name "Dharineesh17"
 git config user.email "dharineeshvengatesan@gmail.com"
 ```
-
 ---
 
 ## Step 2: Create Files and Folders to Ignore
