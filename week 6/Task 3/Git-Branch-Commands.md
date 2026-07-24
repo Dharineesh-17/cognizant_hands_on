@@ -1,8 +1,8 @@
 # Git Branching and Merging - Task 3 Commands
 
 ## Setup Information
-- **Username:** PratapSakthivel
-- **Email:** pratapssakthivel@gmail.com
+- **Username:** Dharineesh-17
+- **Email:** dharineeshvengatesan@gmail.com
 
 ---
 
