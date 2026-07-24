@@ -1,5 +1,4 @@
-# Git Conflict Resolution Lab - Task 4 - Interactive Script
-# Week 6 - PratapSakthivel
+
 
 Write-Host "=== Git Conflict Resolution Lab - Task 4 ===" -ForegroundColor Cyan
 Write-Host ""
