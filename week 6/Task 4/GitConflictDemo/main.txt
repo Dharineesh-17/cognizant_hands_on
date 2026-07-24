@@ -1,0 +1,4 @@
+Git Conflict Resolution Demo
+Initial file for conflict resolution lab
+Student: PratapSakthivel
+Email: pratapssakthivel@gmail.com

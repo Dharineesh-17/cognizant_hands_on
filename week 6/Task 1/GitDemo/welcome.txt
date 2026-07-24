@@ -1,0 +1,3 @@
+Welcome to Git
+This is my first Git repository
+Learning Git commands with hands-on practice
