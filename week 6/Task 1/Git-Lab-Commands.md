@@ -1,8 +1,8 @@
 # Git Hands-On Lab - Task 1 Commands
 
 ## Setup Information
-- **Username:** PratapSakthivel
-- **Email:** pratapssakthivel@gmail.com
+- **Username:** Dharineesh17
+- **Email:** dharineeshvengatesan@gmail.com
 
 ---
 
@@ -15,8 +15,8 @@ git --version
 
 ### 1.2 Configure User ID and Email
 ```bash
-git config --global user.name "PratapSakthivel"
-git config --global user.email "pratapssakthivel@gmail.com"
+git config --global user.name "Dharineesh17"
+git config --global user.email "dharineeshvengatesan@gmail.com"
 ```
 
 ### 1.3 Verify Configuration
@@ -130,7 +130,7 @@ git remote add origin <your-gitlab-repo-url>
 
 Example:
 ```bash
-git remote add origin https://gitlab.com/PratapSakthivel/GitDemo.git
+git remote add origin https://gitlab.com/Dharineesh17/GitDemo.git
 ```
 
 ### 4.3 Pull from Remote (if needed)
