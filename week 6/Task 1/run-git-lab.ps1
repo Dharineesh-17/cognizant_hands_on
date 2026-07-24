@@ -6,8 +6,8 @@ Write-Host ""
 
 # Step 1: Configure Git
 Write-Host "Step 1: Configuring Git..." -ForegroundColor Yellow
-git config --global user.name "PratapSakthivel"
-git config --global user.email "pratapssakthivel@gmail.com"
+git config --global user.name "Dharineesh17"
+git config --global user.email "dharineeshvengatesan@gmail.com"
 Write-Host "Git configuration completed!" -ForegroundColor Green
 Write-Host ""
 
