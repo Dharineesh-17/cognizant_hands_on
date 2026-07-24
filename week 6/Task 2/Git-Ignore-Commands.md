@@ -28,8 +28,8 @@ git init
 
 ### 1.3 Configure Git (if not done globally)
 ```bash
-git config user.name "PratapSakthivel"
-git config user.email "pratapssakthivel@gmail.com"
+git config user.name "Dharineesh17"
+git config user.email "dharineeshvengatesan@gmail.com"
 ```
 
 ---
