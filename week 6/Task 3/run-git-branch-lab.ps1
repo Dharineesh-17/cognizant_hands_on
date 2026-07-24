@@ -1,5 +1,5 @@
 # Git Branching and Merging Lab - Task 3 - Automated Script
-# Week 6 - PratapSakthivel
+# Week 6 - Darineesh-17
 
 Write-Host "=== Git Branching and Merging Lab - Task 3 ===" -ForegroundColor Cyan
 Write-Host ""
