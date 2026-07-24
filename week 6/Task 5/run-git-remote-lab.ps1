@@ -1,5 +1,5 @@
 # Git Remote Push & Cleanup Lab - Task 5 - Interactive Script
-# Week 6 - PratapSakthivel
+# Week 6 - Dharineesh-17
 
 Write-Host "=== Git Remote Push & Cleanup Lab - Task 5 ===" -ForegroundColor Cyan
 Write-Host ""
