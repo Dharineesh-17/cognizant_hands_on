@@ -244,6 +244,60 @@ CTS-Digital-Nurture
 ```
 
 ---
+# Week 5 Exercises
+```text
+Angular_HandsOn/
+└── YourName/
+    ├── student-course-portal/          ← Single progressive Angular project
+    │   ├── src/
+    │   ├── package.json
+    │   ├── angular.json
+    │   └── ...
+    ├── 01_HandsOn_1_Environment_Setup_First_Component/
+    │   ├── README.md
+    │   ├── code/
+    │   └── screenshots/
+    ├── 02_HandsOn_2_Data_Binding_Lifecycle_Communication/
+    │   ├── README.md
+    │   ├── code/
+    │   └── screenshots/
+    ├── 03_HandsOn_3_Directives_Pipes/
+    │   ├── README.md
+    │   ├── code/
+    │   └── screenshots/
+    ├── 04_HandsOn_4_Template_Driven_Forms_Validation/
+    │   ├── README.md
+    │   ├── code/
+    │   └── screenshots/
+    ├── 05_HandsOn_5_Reactive_Forms_Custom_Validators/
+    │   ├── README.md
+    │   ├── code/
+    │   └── screenshots/
+    ├── 06_HandsOn_6_Services_Dependency_Injection/
+    │   ├── README.md
+    │   ├── code/
+    │   └── screenshots/
+    ├── 07_HandsOn_7_Routing_Guards_Lazy_Loading/
+    │   ├── README.md
+    │   ├── code/
+    │   └── screenshots/
+    ├── 08_HandsOn_8_HTTP_Client_Observables_Interceptors/
+    │   ├── README.md
+    │   ├── code/
+    │   └── screenshots/
+    ├── 09_HandsOn_9_NgRx_State_Management/
+    │   ├── README.md
+    │   ├── code/
+    │   └── screenshots/
+    ├── 10_HandsOn_10_Unit_Testing/
+    │   ├── README.md
+    │   ├── code/
+    │   └── screenshots/
+    └── db.json                          ← Mock REST API for Hands-On 8
+```
+
+---
+
 
 ---
 
