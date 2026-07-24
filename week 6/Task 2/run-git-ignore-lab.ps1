@@ -1,5 +1,5 @@
 # Git Ignore Hands-On Lab - Task 2 - Automated Script
-# Week 6 - PratapSakthivel
+# Week 6 - Dharineesh-17
 
 Write-Host "=== Git Ignore Hands-On Lab - Task 2 ===" -ForegroundColor Cyan
 Write-Host ""
